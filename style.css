@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap');
+
+:root {
+  --container-bg-color: #333;
+  --left-bg-color: rgba(223, 39, 39, 0.7);
+  --left-button-hover-color: rgba(110, 8, 8, 0.3);
+  --right-bg-color: rgba(43, 43, 43, 0.8);
+  --right-button-hover-color: rgba(253, 244, 244, 0.3);
+  --hover-width: 75%;
+  --other-width: 25%;
+  --speed: 1000ms;
+}
+.audioP{
+  background: rgba(0, 0, 0, 0.301);
+  float: right;
+  border-radius: 45px;
+}
+.row{
+  position: fixed;
+  width:50px;
+  height: 40px;
+  box-sizing: border-box;
+  border-radius: 45px;
+  background: #fff;
+  border: solid 1px rgba(65, 60, 60, 0.63);
+  z-index: 4;  
+}
+.dropbtn{
+  background: #fff;
+  border-radius: 45px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+.dropbtn:hover{
+  background: rgba(255, 255, 255, 0.603);
+  cursor: pointer;
+  border-radius: 45px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+#tRyu{
+  color:rgb(27, 3, 238);
+  font-family: 'Kaushan Script', cursive;
+  font-size: 100px;
+  text-shadow: 5px 5px 5px #fff;
+}
+.audioP{
+  border:solid 1px  #fff;
+  
+}
+/*Bar menue button */
+.fas {
+  
+  margin: 10px 15px;
+  padding:2px;
+  color: blue;
+}
+.fas:hover { 
+  color: rgb(0, 247, 255);
+  cursor: pointer;
+}
+/*About page*/
+.about{
+  float: left;
+  width: 200px;
+  height: 200px;    
+  border-radius: 50%;  
+  clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
+  shape-outside: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
+  margin: 30px 30px 30px 0;    
+  
+}
+/*About page*/
+.ryu3{
+  position: absolute;
+  top: 80%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  width:100%;
+  padding: 30px;    
+  background: #fff;
+  box-sizing: border-box;
+  border-radius: 10px;
+  box-shadow: 0 15px 50px rgb(0,0,0,.2);
+}
+/*About page*/
+.ryu3 h1 {
+  font-family: 'Rajdhani', sans-serif;
+  color: rgb(27, 24, 24);
+
+}
+/*About page*/
+.ryu3 p {
+  font-family: 'Rajdhani', sans-serif;
+  color: rgb(27, 24, 24);
+  margin: 0;
+  padding: 0;
+  text-align: justify;
+  line-height: 22px;
+
+}
+.cover{
+ width:100%;
+}
+
+html, body {  
+  padding:0;
+  margin:0;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+ 
+}
+
+h1 {
+  font-size: 4rem;
+  color: #fff;
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+
+.button {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  height: 2.5rem;
+  padding-top: 1.3rem;
+  width: 15rem;
+  text-align: center;
+  color: #fff;
+  border: #fff solid 0.2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  transform: translateX(-50%);
+}
+
+.split.left .button:hover {
+  background-color: var(--left-button-hover-color);
+  border-color: var(--left-button-hover-color);
+}
+
+.split.right .button:hover {
+  background-color: var(--right-button-hover-color);
+  border-color: var(--right-button-hover-color);
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: var(--container-bg-color);
+}
+
+.split {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.split.left {
+  left:0;
+  background: url('kuma.jpg') center center no-repeat;
+  background-size: cover;
+}
+
+.split.left:before {
+  position:absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: var(--left-bg-color);
+}
+
+.split.right {
+  right:0;
+  background: url('ryu.jpg') center center no-repeat;
+  background-size: cover;
+}
+
+.split.right:before {
+  position:absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: var(--right-bg-color);
+}
+
+.split.left, .split.right, .split.right:before, .split.left:before {
+  transition: var(--speed) all ease-in-out;
+}
+
+.hover-left .left {
+  width: var(--hover-width);
+}
+
+.hover-left .right {
+  width: var(--other-width);
+}
+
+.hover-left .right:before {
+  z-index: 2;
+}
+
+
+.hover-right .right {
+  width: var(--hover-width);
+}
+
+.hover-right .left {
+  width: var(--other-width);
+}
+
+.hover-right .left:before {
+  z-index: 2;
+}
+
+@media(max-width: 800px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .button {
+    width: 12rem;
+  }
+}
+
+@media(max-height: 700px) {
+  .button {
+    top: 70%;
+  }
+}
+
+/*About page*/
+.ryu{
+  float: left;
+  width: 200px;
+  height: 200px;    
+  border-radius: 50%;  
+  clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
+  shape-outside: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
+  margin: 30px 30px 30px 0;    
+  
+}
+/*About page*/
+.ryu1{
+  position: absolute;
+  top: 190%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  width:100%;
+  padding: 30px;    
+  background: #fff;
+  box-sizing: border-box;
+  border-radius: 10px;
+  box-shadow: 0 15px 50px rgb(0,0,0,.2);
+}
+/*About page*/
+.ryu1 h1 {
+  font-family: 'Rajdhani', sans-serif;
+  color: rgb(27, 24, 24);
+
+}
+/*About page*/
+.ryu1 p {
+  font-family: 'Rajdhani', sans-serif;
+  color: rgb(27, 24, 24);
+  margin: 0;
+  padding: 0;
+  text-align: justify;
+  line-height: 22px;
+
+}
+
+
+/*About page*/
+.ryu2{
+  position: absolute;
+  top: 290%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  width:100%;
+  padding: 30px;    
+  background: #fff;
+  box-sizing: border-box;
+  border-radius: 10px;
+  box-shadow: 0 15px 50px rgb(0,0,0,.2);
+}
+/*About page*/
+.ryu2 h1 {
+  font-family: 'Rajdhani', sans-serif;
+  color: rgb(27, 24, 24);
+
+}
+/*About page*/
+.ryu2 p {
+  font-family: 'Rajdhani', sans-serif;
+  color: rgb(27, 24, 24);
+  margin: 0;
+  padding: 0;
+  text-align: justify;
+  line-height: 22px;
+
+}
